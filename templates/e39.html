@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMW E39 M5</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Add Bootstrap CSS link here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Background image for the page -->
+    <style>
+        body {
+            background-image: url("static/images/m5e39.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .Logout-button {
+            position: absolute;
+            top: 10px; /* Adjust the top position as needed */
+            right: 10px; /* Adjust the left position as needed */
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="btn btn-primary Logout-button">Logout</a>
+    <!-- Add Bootstrap container for content -->
+    <div class="container">
+        <!-- Header with the model name -->
+        <h2 class="text-center text-white mt-5">BMW E39 M5</h2>
+        <!-- Basic information about the model -->
+        <div class="text-white mt-3">
+            <p>The BMW E39 M5, produced from 1998 to 2003, is a part of the BMW M series and is celebrated for its powerful performance and refined luxury.</p>
+            <p>Key features of the E39 M5 include:</p>
+            <ul>
+                <li>Powered by a 4.9-liter V8 engine</li>
+                <li>Produced 394 horsepower and 369 lb-ft of torque</li>
+                <li>Available with a 6-speed manual transmission</li>
+                <li>Rear-wheel drive</li>
+                <li>0 to 60 mph in approximately 4.8 seconds</li>
+            </ul>
+            <p>The E39 M5 is known for its elegant design, spacious interior, and impressive handling, making it a favorite among BMW enthusiasts.</p>
+        </div>
+        <!-- Button to return to the personalized page -->
+        <a href="/bmwlist" class="btn btn-primary mt-3">Back</a>
+    </div>
+
+    <!-- Add Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

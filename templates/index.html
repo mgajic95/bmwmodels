@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to non-official BMW site</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Custom CSS for the semi-transparent button */
+        .transparent-button {
+            background-color: rgba(0, 123, 255, 0.5); /* Adjust the color and opacity as needed */
+            border: none;
+        }
+        .transparent-button:hover {
+            background-color: rgba(0, 123, 255, 0.7); /* Adjust the hover opacity as needed */
+        }
+
+        /* Style for the fade-in animation */
+        .fade-in-page {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Style for the welcome text */
+        .welcome-text {
+            text-align: center;
+            font-size: 24px;
+            margin-top: -450px;
+            color: white;
+        }
+    </style>
+</head>
+<body class="fade-in-page">
+    <div class="container">
+        <!-- Welcome text -->
+        <div class="welcome-text">Welcome to non-official BMW page</div>
+        <!-- BMW M5 button -->
+        <div class="row justify-content-center mt-5">
+            <a href="/signin" class="btn btn-primary btn-sm transparent-button">
+                <h2 class="text-center text-white">BMW</h2>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

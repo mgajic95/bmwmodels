@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMW M5 LIST</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .Logout-button {
+            position: absolute;
+            top: 10px; /* Adjust the top position as needed */
+            right: 10px; /* Adjust the left position as needed */
+        }
+    </style>
+</head>
+<body>
+        <a href="/" class="btn btn-primary Logout-button">Logout</a>
+    <div class="container">
+    <h2 class="text-center text-white">LIST OF BEST M5</h2>
+    <div class="row">
+        <div class="col-md-2 mb-3">
+            <img src="{{ url_for('static', filename='images/e28.jpg') }}" alt="e28" style="max-width: 100%; height: 150px;" class="d-inline-block">
+            <br>
+            <a href="/e28" class="btn btn-primary d-inline-block" style="white-space: nowrap;">E28 M5 (1984–1988)</a>
+            <ul style="color: white">
+                <li>Other models</li>
+                <li>Petrol engines</li>
+                <li>BMW 518i</li>
+                <li>BMW 520i</li>
+                <li>BMW 525i</li>
+                <li>BMW 528i</li>
+                <li>Diesel Engines</li>
+                <li>BMW 518d</li>
+                <li>BMW 524td</li>
+    </ul>
+        </div>
+        <div class="col-md-2 mb-3">
+            <img src="{{ url_for('static', filename='images/m5e34.jpeg') }}" alt="e34" style="max-width: 100%; height: 150px;" class="d-inline-block">
+            <br>
+            <a href="/e34" class="btn btn-primary d-inline-block" style="white-space: nowrap;">E34 M5 (1988–1995)</a>
+            <ul style="color: white">
+                <li>Other models</li>
+                <li>Petrol engines</li>
+                <li>BMW 518i</li>
+                <li>BMW 520i</li>
+                <li>BMW 525i</li>
+                <li>BMW 530i</li>
+                <li>BMW 540i</li>
+                <li>Diesel Engines</li>
+                <li>BMW 524td</li>
+                <li>BMW 525td</li>
+                <li>BMW 525tds</li>
+    </ul>
+        </div>
+        <div class="col-md-2 mb-3">
+            <img src="{{ url_for('static', filename='images/m5e39.jpg') }}" alt="e39" style="max-width: 100%; height: 150px;" class="d-inline-block">
+            <br>
+            <a href="/e39" class="btn btn-primary d-inline-block" style="white-space: nowrap;">E39 M5 (1998-2003)</a>
+            <ul style="color: white">
+                <li>Other models</li>
+                <li>Petrol engines</li>
+                <li>BMW 520i</li>
+                <li>BMW 523i</li>
+                <li>BMW 528i</li>
+                <li>BMW 530i</li>
+                <li>BMW 540i</li>
+                <li>Diesel Engines</li>
+                <li>BMW 520d</li>
+                <li>BMW 525d</li>
+                <li>BMW 530tds</li>
+    </ul>
+        </div>
+        <div class="col-md-2 mb-3">
+            <img src="{{ url_for('static', filename='images/e60m5.jpg') }}" alt="e60" style="max-width: 100%; height: 150px;" class="d-inline-block">
+            <br>
+            <a href="/e60" class="btn btn-primary d-inline-block" style="white-space: nowrap;">E60 M5 (2004–2010)</a>
+            <ul style="color: white">
+                <li>Other models</li>
+                <li>Petrol engines</li>
+                <li>BMW 520i</li>
+                <li>BMW 523i</li>
+                <li>BMW 525i</li>
+                <li>BMW 530i</li>
+                <li>BMW 545i</li>
+                <li>BMW 550i</li>
+                <li>Diesel Engines</li>
+                <li>BMW 520d</li>
+                <li>BMW 525d</li>
+                <li>BMW 530d</li>
+                <li>BMW 535d</li>
+    </ul>
+        </div>
+        <div class="col-md-2 mb-3">
+            <img src="{{ url_for('static', filename='images/f10m5.jpeg') }}" alt="f10" style="max-width: 100%; height: 150px;" class="d-inline-block">
+            <br>
+            <a href="/f10" class="btn btn-primary d-inline-block" style="white-space: nowrap;">F10 M5 (2011–2016)</a>
+             <button class="btn btn-primary d-inline-block collapsible" style="white-space: nowrap;">Other Models</button>
+                <!-- Collapsible menu for F10 models -->
+                <ul class="nested" style="color: white; display:none;">
+                    <li>Other models</li>
+                    <li>Petrol engines</li>
+                    <li>BMW 520i</li>
+                    <li>BMW 523i</li>
+                    <li>BMW 525i</li>
+                    <li>BMW 535i</li>
+                    <li>BMW 550i</li>
+                    <li>BMW 528i xDrive</li>
+                    <li>BMW 535i xDrive</li>
+                    <li>BMW 550i xDrive</li>
+                    <li>Diesel Engines</li>
+                    <li>BMW 518d</li>
+                    <li>BMW 520d</li>
+                    <li>BMW 525d</li>
+                    <li>BMW 530d</li>
+                    <li>BMW 535d</li>
+                    <li>BMW 520d xDrive</li>
+                    <li>BMW 525d xDrive</li>
+                    <li>BMW 530d xDrive</li>
+                    <li>BMW 535d xDrive</li>
+                    <li>BMW M550d xDrive</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+        <!-- Dodajte ovde još slika i dugmadi -->
+
+
+        <a href="/personalized" class="btn btn-primary">Nazad</a>
+
+        <script>
+    // JavaScript to handle the collapsible behavior
+    document.querySelector('.collapsible').addEventListener('click', function () {
+        var nestedMenu = document.querySelector('.nested');
+        if (nestedMenu.style.display === 'none' || nestedMenu.style.display === '') {
+            nestedMenu.style.display = 'block';
+        } else {
+            nestedMenu.style.display = 'none';
+        }
+    });
+</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

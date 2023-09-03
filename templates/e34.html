@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMW E34 M5</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Add Bootstrap CSS link here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Background image for the page -->
+    <style>
+    body {
+        background-image: url("static/images/bmwm5e34.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh; /* Set the background to cover the full viewport height */
+    }
+    .Logout-button {
+            position: absolute;
+            top: 10px; /* Adjust the top position as needed */
+            right: 10px; /* Adjust the left position as needed */
+        }
+</style>
+</head>
+<body>
+            <a href="/" class="btn btn-primary Logout-button">Logout</a>
+    <!-- Add Bootstrap container for content -->
+    <div class="container">
+        <!-- Header with the model name -->
+        <h2 class="text-center text-white mt-5">BMW E34 M5</h2>
+        <!-- Basic information about the model -->
+        <div class="text-white mt-3">
+            <p>The BMW E34 M5, produced from 1988 to 1995, is part of the BMW M series and is renowned for its combination of luxury and performance.</p>
+            <p>Key features of the E34 M5 include:</p>
+            <ul>
+                <li>Powered by a 3.6-liter inline-six engine (later models had a 3.8-liter engine)</li>
+                <li>Produced between 311 to 340 horsepower depending on the engine version</li>
+                <li>Available with a 5-speed manual or 6-speed manual transmission</li>
+                <li>Rear-wheel drive</li>
+                <li>0 to 60 mph in approximately 5.9 seconds (for the 3.8-liter version)</li>
+            </ul>
+            <p>The E34 M5 is known for its refined interior, comfortable ride, and impressive handling, making it a classic among BMW enthusiasts.</p>
+        </div>
+        <!-- Button to return to the personalized page -->
+        <a href="/bmwlist" class="btn btn-primary mt-3">Back</a>
+    </div>
+
+    <!-- Add Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

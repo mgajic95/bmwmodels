@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personalized Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Add Bootstrap CSS link here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .Logout-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .menu-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            width: 30px;
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            z-index: 2;
+        }
+
+        /* Styles for the collapsible menu content */
+        .menu-content {
+            width: 0;
+            height: 0;
+            position: fixed;
+            top: 40px; /* Adjust the top position */
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.9); /* White color with some transparency */
+            overflow: hidden;
+            transition: 0.5s;
+            z-index: 1;
+        }
+
+        /* Styles for the menu links */
+        .menu-link {
+            padding: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #333;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* Styles for the menu links on hover */
+        .menu-link:hover {
+            background-color: #eee;
+        }
+
+        /* Styles for the sub-menu */
+        .sub-menu {
+            display: none;
+            background-color: #f9f9f9;
+            padding-left: 20px;
+        }
+
+        /* Styles for the sub-menu links */
+        .sub-menu-link {
+            padding: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            color: #333;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* Styles for the sub-menu links on hover */
+        .sub-menu-link:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu button in the top-left corner -->
+    <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
+
+    <!-- Collapsible menu content -->
+    <div id="menu" class="menu-content">
+        <a href="#" class="menu-link" onclick="toggleSubMenu()">List of BMW models</a>
+        <div class="sub-menu">
+            <a href="{{ url_for('series1') }}" class="sub-menu-link">Series 1</a>
+            <a href="{{ url_for('series2') }}" class="sub-menu-link">Series 2</a>
+            <a href="{{ url_for('series3') }}" class="sub-menu-link">Series 3</a>
+            <a href="{{ url_for('series4') }}" class="sub-menu-link">Series 4</a>
+            <a href="{{ url_for('series5') }}" class="sub-menu-link">Series 5</a>
+            <a href="{{ url_for('series6') }}" class="sub-menu-link">Series 6</a>
+            <a href="{{ url_for('series7') }}" class="sub-menu-link">Series 7</a>
+            <a href="{{ url_for('series7') }}" class="sub-menu-link">Series 8</a>
+            <a href="{{ url_for('seriesx1') }}" class="sub-menu-link">Series X1</a>
+            <a href="{{ url_for('seriesx2') }}" class="sub-menu-link">Series X2</a>
+            <a href="{{ url_for('seriesx3') }}" class="sub-menu-link">Series X3</a>
+            <a href="{{ url_for('seriesx4') }}" class="sub-menu-link">Series X4</a>
+            <a href="{{ url_for('seriesx4') }}" class="sub-menu-link">Series X5</a>
+            <a href="{{ url_for('seriesx5') }}" class="sub-menu-link">Series X6</a>
+            <a href="{{ url_for('seriesx6') }}" class="sub-menu-link">Series X7</a>
+            <a href="/bmwlist" class="btn btn-primary" style="margin-right: 10px">List of M5</a>
+        </div>
+        <a href="#" class="menu-link">About Us</a>
+        <a href="#" class="menu-link">Contact Us</a>
+    </div>
+
+    <a href="/" class="btn btn-primary Logout-button">Logout</a>
+
+    <div class="container">
+        <h2 class="text-center text-white">Dobrodošli u BMW M5's stranicu {{ user_name }}!</h2>
+
+        <a href="/signin" class="btn btn-primary">Nazad</a>
+    </div>
+
+    <!-- JavaScript to toggle the menu and sub-menu -->
+    <script>
+    function toggleMenu() {
+        var menu = document.getElementById("menu");
+        if (menu.style.width === "0px" || menu.style.width === "") {
+            menu.style.width = "150px";
+            menu.style.height = "auto";
+        } else {
+            menu.style.width = "0px";
+            menu.style.height = "0px";
+            hideSubMenu('bmwModelsSubMenu');
+            hideSubMenu('seriesSubMenu');
+        }
+    }
+
+    function toggleSubMenu() {
+        var subMenu = document.querySelector(".sub-menu");
+        if (subMenu.style.display === "none" || subMenu.style.display === "") {
+            subMenu.style.display = "block";
+        } else {
+            subMenu.style.display = "none";
+        }
+    }
+
+    function hideSubMenu(subMenuId) {
+        var subMenu = document.getElementById(subMenuId);
+        subMenu.style.display = "none";
+    }
+
+    // Prevent default action of the links
+    document.querySelectorAll(".sub-menu-link").forEach(function(link) {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            var href = this.getAttribute("href");
+            if (href) {
+                window.location.href = href;
+            }
+        });
+    });
+</script>
+
+    <!-- Add Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

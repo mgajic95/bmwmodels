@@ -1,0 +1,21 @@
+body {
+    background-image: url("../static/images/allbmw.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: transparent;
+    opacity: 0; /* Start with zero opacity */
+    animation: fadeIn 1s ease-in-out forwards; /* Apply the animation directly to the body */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

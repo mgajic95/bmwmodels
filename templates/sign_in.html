@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .input-group {
+            background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        input.form-control {
+            background: transparent;
+            border: none;
+        }
+        .Back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="btn btn-primary Back-button">Back</a>
+    <!-- Form for entering the username -->
+    <form method="POST" action="/signin" onsubmit="return validateForm()">
+        <div class="input-group" style="max-width: 300px;">
+            <input type="text" class="form-control" id="usernameInput" name="usernameInput" placeholder="Username" required>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+    </form>
+
+    <!-- JavaScript for form validation -->
+    <script>
+        function validateForm() {
+            // Get the username from the input field
+            var username = document.getElementById("usernameInput").value;
+
+            // Check if the username is empty
+            if (!username) {
+                // Display an alert and prevent form submission
+                alert("Please enter a username.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
