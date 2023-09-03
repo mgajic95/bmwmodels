@@ -2,10 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <h1>Dobrodosli u bmw series 3</h1>
+    <title>BMW Serija 2 Modeli</title>
+    <!-- Uključivanje Bootstrap i jQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: url("static/images/bmwseries2.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .car-list {
+            margin-top: 20px;
+        }
+        .car-model {
+            margin-bottom: 10px;
+            background-color: rgba(0, 0, 0, 0.4); /* Transparentno crna pozadina */
+            color: #13294B; /* Tamnija plava boja teksta */
+            padding: 10px; /* Dodajte padding da bi tekst bio čitljiv */
+            border-radius: 5px; /* Zaobljeni ivičnjaci za bolji izgled */
+            width: fit-content;
+        }
+        .car-column {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
+    <a href="/personalized" class="btn btn-secondary">Nazad</a>
+    <div class="text-white container" style="color: white;">
+        <h1>Dobrodošli u BMW Seriju 2 - Elegancija i Performanse</h1>
 
+         <p style="color: #13294B;">BMW Serija 2 kombinuje eleganciju sa vrhunskim performansama. Sa kompaktnim dizajnom i izuzetnim inženjeringom,
+             Serija 2 je idealan automobil za vozače koji traže sportski duh u kompaktnom pakovanju.</p>
+
+        <p style="color: #13294B;">Sa različitim opcijama benzinskih i dizel modela, Serija 2 pruža širok spektar performansi i ekonomičnosti.
+            Bez obzira da li preferirate sportsku vožnju ili ekonomičnost, Serija 2 ima model koji vam odgovara.</p>
+        <div class="row">
+           <div class="col car-column">
+                <h2 class="car-model text-white">Benzinski Modeli</h2>
+                <ul class="car-list">
+                    <li class="car-model text-white">BMW 218i</li>
+                    <li class="car-model text-white">BMW 220i</li>
+                    <li class="car-model text-white">BMW 230i</li>
+                    <li class="car-model text-white">BMW M235i</li>
+                    <li class="car-model text-white">BMW M240i</li>
+                </ul>
+            </div>
+            <div class="col car-column">
+                <h2 class="car-model text-white">Dizel Modeli</h2>
+                <ul class="car-list">
+                    <li class="car-model text-white">BMW 216d</li>
+                    <li class="car-model text-white">BMW 218d</li>
+                    <li class="car-model text-white">BMW 220d</li>
+                    <li class="car-model text-white">BMW 225d</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
 </body>
-</html>s
+</html>
