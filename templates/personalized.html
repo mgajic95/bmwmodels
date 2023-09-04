@@ -74,6 +74,12 @@
         .sub-menu-link:hover {
             background-color: #ddd;
         }
+        .welcome-text {
+            text-align: center;
+            font-size: 34px;
+            margin-top: -200px;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -108,9 +114,10 @@
     <a href="/" class="btn btn-primary Logout-button">Logout</a>
 
     <div class="container">
-        <h2 class="text-center text-white">Dobrodošli u BMW M5's stranicu {{ user_name }}!</h2>
+        <h2 class="welcome-text text-white">Dobrodošli u BMW M5's stranicu {{ user_name }}!</h2>
 
-        <a href="/signin" class="btn btn-primary">Nazad</a>
+
+
     </div>
 
     <!-- JavaScript to toggle the menu and sub-menu -->
