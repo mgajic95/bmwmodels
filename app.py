@@ -45,6 +45,8 @@ def personalized(user_name):
 def bmwlist():
     return render_template('bmwlist.html')
 
+
+
 @app.route('/e28')
 def bmw28():
     return render_template('e28.html')
@@ -90,27 +92,6 @@ def series7():
 @app.route('/series8')
 def series8():
     return render_template('series8.html')
-@app.route('/seriesx1')
-def seriesx1():
-    return render_template('seriesx1.html')
-@app.route('/seriesx2')
-def seriesx2():
-    return render_template('seriesx2.html')
-@app.route('/seriesx3')
-def seriesx3():
-    return render_template('seriesx3.html')
-@app.route('/seriesx4')
-def seriesx4():
-    return render_template('seriesx4.html')
-@app.route('/seriesx5')
-def seriesx5():
-    return render_template('seriesx5.html')
-@app.route('/seriesx6')
-def seriesx6():
-    return render_template('seriesx6.html')
-@app.route('/seriesx7')
-def seriesx7():
-    return render_template('seriesx7.html')
 
 
 

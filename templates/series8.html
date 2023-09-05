@@ -2,9 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>BMW Serija 8 Modeli</title>
+    <!-- Uključivanje Bootstrap i jQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: url("static/images/series8.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .car-list {
+            margin-top: 20px;
+        }
+        .car-model {
+            margin-bottom: 10px;
+            background-color: rgba(0, 0, 0, 0.4); /* Transparentno crna pozadina */
+            color: white; /* Bela boja teksta za bolju vidljivost */
+            padding: 10px; /* Dodajte padding da bi tekst bio čitljiv */
+            border-radius: 5px; /* Zaobljeni ivičnjaci za bolji izgled */
+            width: fit-content;
+        }
+        .car-column {
+            margin-top: 20px;
+        }
+        .car-description {
+            margin-bottom: 10px;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            width: fit-content;
+        }
+    </style>
 </head>
 <body>
+    <!-- Dugme za prelazak na sledeći model -->
+    <a href="/series1" class="btn btn-secondary">Next model</a>
 
+    <!-- Dugme za povratak na prethodni model -->
+    <a href="/series6" class="btn btn-secondary">Back to previous model</a>
+    <a href="/personalized" class="btn btn-secondary">Nazad</a>
+    <div class="text-white container" style="color: white;">
+        <h1 class="car-description">BMW Serija 8 - Elegancija u Pokretu</h1>
+        <p class="car-description">BMW Serija 8 predstavlja kombinaciju elegancije i izvanrednih performansi. Ova luksuzna
+            sportska klasa automobila donosi ultimativni spoj stila i snage, ostavljajući za sobom trag beskompromisne
+            elegancije na svakom putovanju. Dinamički dizajn i inovativna tehnologija čine Seriju 8 pravim remek-djelom
+            inženjeringa.</p>
+
+        <div class="row">
+            <div class="col car-column">
+                <h2 class="car-model">Benzinski Modeli</h2>
+                <ul class="car-list">
+                    <li class="car-model">BMW 840i</li>
+                    <li class="car-model">BMW 850i</li>
+                    <li class="car-model">BMW M850i xDrive</li>
+                    <li class="car-model">BMW M8</li>
+                    <li class="car-model">BMW M8 Competition</li>
+                </ul>
+            </div>
+            <div class="col car-column">
+                <h2 class="car-model">Dizel Modeli</h2>
+                <ul class="car-list">
+                    <li class="car-model">BMW 840d</li>
+                    <li class="car-model">BMW 850d</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
